@@ -1,0 +1,200 @@
+.VoiceWrapper {
+  width: 500px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  background: #282828;
+  border-radius: 0px;
+}
+.VoiceWrapper .Cancle {
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
+  min-height: 30px;
+}
+
+.VoiceWrapper .Cancle .closeIcon {
+  color: aliceblue;
+  font-size: 36px;
+  padding-top: 10px;
+}
+
+.VoiceWrapper .Top {
+  display: flex;
+  justify-content: left;
+  padding-left: 30px;
+  height: 160px;
+  overflow-y: scroll;
+}
+
+.VoiceWrapper .Top::-webkit-scrollbar {
+  display: none;
+}
+
+.VoiceWrapper .Top p {
+  color: aliceblue;
+  font-weight: 300;
+  font-size: 22px;
+  margin: 10px;
+  margin-top: 20px;
+  word-wrap: break-word;
+}
+
+.VoiceWrapper .Bottom {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+}
+.IconParent {
+  display: inline;
+}
+
+.iconWrapper .css-i4bv87-MuiSvgIcon-root {
+  color: aliceblue;
+  font-size: 45px;
+}
+
+@keyframes listen {
+  0% {
+    /* transform: scale(0.5); */
+
+    filter: drop-shadow(0px 2px 18px 18px #888888);
+  }
+  25% {
+    /* transform: scale(0.25); */
+    box-shadow: 0px 2px 12px 12px #fff;
+  }
+  35% {
+    /* transform: scale(0.1); */
+    box-shadow: 0px 1px 13px 13px #888888;
+  }
+  65% {
+    /* transform: scale(0.35); */
+    box-shadow: 0px 2px 12px 12px #888888;
+  }
+  80% {
+    /* transform: scale(0.5); */
+    box-shadow: 0px 1px 10px 10px #888888;
+  }
+  100% {
+    /* transform: scale(0.25); */
+
+    filter: drop-shadow(0px 2px 12px 12px #fff);
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1, 1);
+
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    box-shadow: 0px 2px 10px 10px #fff;
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(1.3, 1.3);
+    box-shadow: 0px 2px 15px 15px rgb(126, 124, 124);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: pulsate infinite 1.5s;
+}
+
+.iconWrapper {
+  background: #f00;
+
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  filter: drop-shadow(0px 2px 18px 18px #fff);
+  position: relative;
+  /* animation-name: listen;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; */
+}
+
+/* .iconWrapper.active {
+  animation-name: listen;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; 
+
+  animation: pulsate infinite 2.5s;
+} */
+
+@media screen and (max-width: 780px) {
+  .BootStrapDia {
+    padding: 0px;
+  }
+  .MuiPaper-root {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .VoiceWrapper {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background: #282828;
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .VoiceWrapper .Cancle {
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+    min-height: 30px;
+    width: 100%;
+  }
+
+  .VoiceWrapper .Top {
+    display: flex;
+    justify-content: left;
+    padding-left: 30px;
+    min-height: 160px;
+    width: 100%;
+  }
+
+  .iconWrapper {
+    background: red;
+
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    animation-name: listen;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-size: 56px;
+  }
+
+  .iconWrapper .css-i4bv87-MuiSvgIcon-root {
+    color: aliceblue;
+    font-size: 35px;
+    width: 70px;
+  }
+}
